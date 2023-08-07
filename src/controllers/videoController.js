@@ -1,5 +1,11 @@
-export const showTrending = (req, res) => res.send("Trending Videos");
+export const showTrending = (req, res) => res.render("home");
 
-export const watch = (req, res) => res.send("Watch");
+export const see = (req, res) => res.render("watch");
 
-export const edit = (req, res) => res.send("Edit");
+export const edit = (req, res) => res.render("edit");
+
+export const search = (req, res) => res.send("Search");
+
+export const upload = (req, res) => res.send("Upload");
+
+export const remove = (req, res) => res.send("Delete");
