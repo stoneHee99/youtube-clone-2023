@@ -16,7 +16,9 @@
   },
   "homepage": "https://github.com/stoneHee99/youtube-clone-2023#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "mongoose": "^7.4.2",
     "morgan": "^1.10.0",
     "pug": "^3.0.2"
