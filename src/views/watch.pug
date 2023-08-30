@@ -1,7 +1,20 @@
 extends base.pug
 
 block content 
-    video(src="/" + video.fileUrl, controls)
+    div#videoContainer
+        video(src="/" + video.fileUrl)
+        div#videoControls
+            button#play Play 
+            button#mute Mute 
+            input(type="range", min="0", max="1", step="0.1")#volume
+            div    
+                span#currentTime 00:00
+                span |
+                span#totalTime 00:00
+            div 
+                input(type="range", step="1", value="0", min="0")#timeline
+            div 
+                button#fullScreen Enter Full Screen
     div
         p=video.description
         small=video.createdAt 
@@ -12,3 +25,6 @@ block content
         a(href=`${video.id}/edit`) Edit video 👉
         br
         a(href=`${video.id}/delete`) Delete video 👉
+
+block scripts 
+    script(src="/static/js/videoPlayer.js")
